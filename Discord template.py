@@ -7,6 +7,8 @@ config.read('INSERT CONFIG FILE PATH')
 discord_token = config.get('default', 'token')
 client = discord.Client()
 
+dice = [4,6,10,12,20]
+
 #if you want a console log in message
 @client.event
 async def on_ready():
@@ -22,20 +24,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if "!d4" in message.content:
-        await message.channel.send(random.randrange(1,5))
-        return
-    elif "!d6" in message.content:
-        await message.channel.send(random.randrange(1,7))
-        return
-    elif "!d10" in message.content:
-        await message.channel.send(random.randrange(1,11))
-        return
-    elif "!d12" in message.content:
-        await message.channel.send(random.randrange(1,13))
-        return 
-    elif "!d20" in message.content:
-        await message.channel.send(random.randrange(1,21))
-        return
+    #roll d4 6 10 12 or 20
+    for a in range(0, len(dice)):
+        if "!d" + str(dice[a]) in message.content:
+            await message.channel.send(random.randrange(1, int(dice[a]) + 1))
+
 
 client.run(discord_token)
