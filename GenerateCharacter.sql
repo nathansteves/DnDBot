@@ -1,1 +1,13 @@
-
+INSERT INTO characters VALUES (11, 'Joe', 
+                               FLOOR(1+(RAND()10)), 
+                               FLOOR(1+(RAND()13)), 
+                               FLOOR(1+(RAND()10)), 
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)),
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)), 
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)), 
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)), 
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)), 
+                               FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6))+FLOOR(1+(RAND()6)), 
+                               FLOOR(1+(RAND()10)), FLOOR(1+(RAND()10)), FLOOR(1+(RAND()10)), 
+                               FLOOR(1+(RAND()10)), FLOOR(1+(RAND()20)), FLOOR(1+(RAND()20)), 
+                               FLOOR(1+(RAND()20)), FLOOR(1+(RAND()20)), FLOOR(1+(RAND()20)));
